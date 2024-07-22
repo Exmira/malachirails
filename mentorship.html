@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Mode Mentorship Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-white text-black">
+
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-xl font-bold text-gray-900">
+                    <a href="/">Malachi Rails</a>
+                </div>
+                <!-- Menu Items -->
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="contact.html" class="text-gray-800 hover:text-gray-500">Contact Me</a></li>
+                        <li><a href="mentorship.html" class="text-gray-800 hover:text-gray-500">Mentorship</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto py-12 px-6">
+        <!-- Hero Section -->
+        <section class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-black mb-4">Unlock Your Full Potential with Expert Ruby on Rails
+                Mentorship</h1>
+            <p class="text-lg text-gray-700 mb-8">Choose the support that fits your needs and watch your skills soar.
+                Personalized guidance, actionable insights, and flexible options are just a click away.</p>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="flex flex-col md:flex-row gap-8 mb-12">
+            <!-- Monthly Subscription Plan -->
+            <div class="bg-blue-50 shadow-xl rounded-lg p-8 flex-1 border border-blue-200">
+                <h2 class="text-4xl font-bold text-blue-900 mb-4">Monthly Subscription</h2>
+                <p class="text-lg text-blue-700 mb-6">Commit to long-term success with comprehensive support tailored to
+                    your growth.</p>
+                <div class="text-4xl font-extrabold text-blue-800 mb-8">$50 <span class="text-lg text-blue-600">/
+                        month</span></div>
+                <ul class="list-disc pl-5 mb-8 text-lg text-blue-700 space-y-3">
+                    <li>Weekly one-on-one coaching sessions</li>
+                    <li>Ongoing personalized project feedback</li>
+                    <li>Exclusive access to premium resources and tools</li>
+                    <li>Continuous progress tracking and support</li>
+                </ul>
+                <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+                <stripe-buy-button buy-button-id="buy_btn_1PfGS8KHyDT7Zw37AxjIItJN"
+                    publishable-key="pk_live_51OoiRCKHyDT7Zw37QYhm5IfBGvYtCNAzbWCbJpIElTTA88QVcxifu1I0fOTsI3d34LPnE2egs9oxlon9wQU7wiZi00PGR1D3Wu">
+                </stripe-buy-button>
+            </div>
+
+            <!-- Per-Call Payment Option -->
+            <div class="bg-green-100 shadow-lg rounded-lg p-8 flex-1 border border-green-300">
+                <h2 class="text-4xl font-bold text-green-900 mb-6">Pay Per Call</h2>
+                <p class="text-xl text-green-800 mb-4">Get focused support exactly when you need it, with flexible
+                    scheduling and direct insights.</p>
+                <div class="text-4xl font-extrabold text-green-700 mb-6">$15 <span class="text-lg text-green-600">/
+                        session</span></div>
+                <ul class="list-disc pl-5 mb-6 text-lg text-green-800 space-y-2">
+                    <li>On-demand tailored coaching for specific issues</li>
+                    <li>Flexible scheduling based on your availability</li>
+                    <li>Instant actionable insights and problem-solving</li>
+                    <li>No ongoing commitment, pay only for what you need</li>
+                </ul>
+                <a href="https://calendly.com/povabusiness/30min" target="_blank"
+                    class="bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition">Book a
+                    session</a>
+            </div>
+        </section>
+        <!---
+        <!-- Testimonials Section 
+        <section class="bg-gray-100 p-8 rounded-lg mb-12" data-controller="carousel">
+            <h2 class="text-4xl font-extrabold text-black mb-8 text-center">What Our Clients Are Saying</h2>
+            <div class="testimonial-container relative">
+                <div data-carousel-target="carousel" class="flex transition-transform duration-500">
+                    <!-- Slide 1 
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 py-6" data-carousel-target="slide">
+                        <div class="bg-gray-200 shadow-lg rounded-lg p-6 max-w-xl mx-auto">
+                            <p class="text-lg text-gray-700 mb-4">"The mentorship program has been a game-changer for
+                                me. The guidance and support have been invaluable."</p>
+                            <p class="font-semibold text-black">Alice Johnson</p>
+                            <p class="text-gray-500">Full Stack Developer</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 py-6" data-carousel-target="slide">
+                        <div class="bg-gray-200 shadow-lg rounded-lg p-6 max-w-xl mx-auto">
+                            <p class="text-lg text-gray-700 mb-4">"The one-on-one sessions are incredibly helpful. I've
+                                improved my skills and confidence in Rails significantly."</p>
+                            <p class="font-semibold text-black">Bob Smith</p>
+                            <p class="text-gray-500">Software Engineer</p>
+                        </div>
+                    </div>
+                    <!-- Add more slides as needed 
+                </div>
+
+                <!-- Pagination Controls 
+                <div class="text-center mt-6">
+                    <button data-action="carousel#prev"
+                        class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Previous</button>
+                    <span class="mx-4 text-black">Page <span data-carousel-target="currentPage">1</span> of <span
+                            data-carousel-target="totalPages">2</span></span>
+                    <button data-action="carousel#next"
+                        class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Next</button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Final Call to Action -->
+        <section class="text-center">
+            <h2 class="text-4xl font-semibold text-black mb-6">Ready to Take the Next Step?</h2>
+            <p class="text-lg text-gray-700 mb-6">Select the mentorship plan that aligns with your goals and start
+                transforming your skills today. Don’t wait—your future self will thank you!</p>
+            <div class="flex justify-center gap-4">
+                <!-- Add Call to Action Buttons if needed -->
+            </div>
+        </section>
+    </div>
+
+    <style>
+        /* Container for the carousel */
+        .testimonial-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Style for each slide */
+        .testimonial-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Transition for smooth sliding */
+        #testimonial-carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #prev-slide,
+        #next-slide {
+            cursor: pointer;
+        }
+
+        #prev-slide:disabled,
+        #next-slide:disabled {
+            background-color: "#gray-600";
+            cursor: not-allowed;
+        }
+    </style>
+</body>
+
+</html>

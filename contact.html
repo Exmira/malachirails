@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Malachi Rails</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #141414;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #e50914;
+        }
+
+        .hero-section {
+            background: linear-gradient(to right, #e50914, #141414);
+            color: #ffffff;
+            padding: 4rem 0;
+        }
+
+        .form-section {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            border-radius: 0.5rem;
+        }
+
+        .form-section input,
+        .form-section textarea {
+            border: 1px solid #dddddd;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-section input:focus,
+        .form-section textarea:focus {
+            border-color: #e50914;
+            box-shadow: 0 0 5px rgba(229, 9, 20, 0.5);
+            outline: none;
+        }
+
+        .btn-submit {
+            background-color: #e50914;
+            color: #ffffff;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #d40813;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar -->
+    <nav class="navbar shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-xl font-bold text-white">
+                    <a href="/">Malachi Rails</a>
+                </div>
+                <!-- Menu Items -->
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="contact.html" class="hover:text-gray-400">Contact Me</a></li>
+                        <li><a href="mentorship.html" class="hover:text-gray-400">Mentorship</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <h1 class="text-5xl font-extrabold mb-4">Get in Touch</h1>
+            <p class="text-lg">I'd love to hear from you! Whether you have a question or need assistance, feel free to
+                reach out.</p>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="max-w-7xl mx-auto py-12 px-6">
+        <section class="form-section">
+            <h1 class="text-4xl font-extrabold mb-6">Contact Me</h1>
+            <p class="text-lg text-gray-700 mb-8">Have questions or need more information? Fill out the form below and
+                I'll get back to you as soon as possible.</p>
+
+            <form action="https://formspree.io/f/xnnajpaw" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-lg font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required
+                        class="mt-1 p-2 w-full border rounded-lg shadow-sm focus:ring-2 focus:ring-red-500">
+                </div>
+
+                <div>
+                    <label for="email" class="block text-lg font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required
+                        class="mt-1 p-2 w-full border rounded-lg shadow-sm focus:ring-2 focus:ring-red-500">
+                </div>
+
+
+                <div>
+                    <label for="message" class="block text-lg font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="4" required
+                        class="mt-1 p-2 w-full border rounded-lg shadow-sm focus:ring-2 focus:ring-red-500"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn-submit w-full py-3 px-6 rounded-lg transition">Send
+                        Message</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+</body>
+
+</html>
