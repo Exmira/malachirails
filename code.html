@@ -33,6 +33,14 @@
             color: #333333;
         }
 
+        .navbar a {
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #e50914;
+        }
+
         .section-heading {
             font-size: 2.25rem;
             font-weight: 700;
@@ -84,41 +92,50 @@
             top: 0;
             z-index: 1000;
         }
+
+        .hero-section {
+            background: linear-gradient(to right, #e50914, #141414);
+            color: #ffffff;
+            padding: 4rem 0;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Sticky Navbar -->
-    <nav class="bg-white shadow-lg sticky-navbar">
+    <!-- Navbar -->
+    <nav class="navbar top-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
-                <div class="text-xl md:text-2xl font-bold text-gray-900">
-                    <a href="/" title="Malachi Rails - Ruby on Rails Resources">Malachi Rails</a>
+                <div class="text-xl md:text-2xl font-bold">
+                    <a href="/" title="Malachi Rails - Expert Ruby on Rails Mentorship">Malachi Rails</a>
                 </div>
                 <!-- Menu Items -->
                 <div>
                     <ul class="flex space-x-4 md:space-x-6">
                         <li><a href="contact.html" title="Contact Malachi Rails"
-                                class="text-gray-800 hover:text-gray-500 text-base md:text-xl">Contact</a></li>
-                        <li><a href="mentorship.html" title="Ruby on Rails Mentorship"
-                                class="text-gray-800 hover:text-gray-500 text-base md:text-xl">Mentorship</a></li>
+                                class="text-base md:text-xl">Contact</a></li>
+                        <li><a href="mentorship.html" title="Ruby on Rails Mentorship Plans"
+                                class="text-base md:text-xl">Mentorship</a></li>
                         <li><a href="code.html" title="Ruby on Rails Code Examples"
-                                class="text-gray-800 hover:text-gray-500 text-base md:text-xl">Code</a></li>
+                                class="text-base md:text-xl">Code</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
+    <section class="text-center mb-12 hero-section">
+        <h1 class=" mb-4 text-4xl md:text-5xl font-extrabold mb-4" style="color: white;">Ruby on Rails
+            Resources.</h1>
+        <p class="text-lg mb-8">Boost your Rails development skills. Click on the cards below to explore our
+            offerings.</p>
+    </section>
 
     <!-- Main Content -->
     <main class="container mx-auto p-6">
-        <section class="text-center mb-12">
-            <h1 class="section-heading mb-4">Explore Ruby on Rails Resources by Malachi Rails</h1>
-            <p class="text-lg mb-8">Discover a range of Ruby on Rails tutorials, templates, and clone code
-                to boost your Rails development skills. Click on the cards below to explore our offerings.</p>
-        </section>
 
         <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Card 1 -->
