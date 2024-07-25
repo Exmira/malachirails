@@ -11,29 +11,48 @@
         content="Ruby on Rails, Rails mentorship, Ruby programming, learn Rails, Rails developer, Ruby on Rails projects, Rails career advancement">
     <meta name="author" content="Malachi Rails">
     <title>Master Ruby on Rails with Expert Mentorship | Malachi Rails</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Privacy-First Analytics -->
     <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
     <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="Analytics Tracking"
             referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+    <!-- Styles -->
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
         .section-heading {
             font-size: 2rem;
             font-weight: 700;
+            color: #333;
         }
 
         .cta-button {
-            background-color: #b80000;
-            color: white;
+            background-color: #e50914;
+            color: #ffffff;
             padding: 0.75rem 1.5rem;
-            border-radius: 9999px;
+            border-radius: 0.5rem;
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #3730a3;
+            background-color: #d40813;
+            transform: scale(1.05);
         }
 
         .youtube-icon {
@@ -50,10 +69,48 @@
             top: 0;
             z-index: 1000;
         }
+
+        .hero-section {
+            background: linear-gradient(to right, #e50914, #141414);
+            color: #ffffff;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section p,
+        .content-section li {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+        .content-section ul {
+            padding-left: 1.5rem;
+        }
+
+        .content-section ul li {
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body>
 
     <!-- Sticky Navbar -->
     <nav class="bg-white shadow-lg sticky-navbar">
@@ -79,7 +136,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="py-16 md:py-20 lg:py-24 bg-red-800 text-white text-center">
+    <section id="home" class="hero-section">
         <div class="max-w-4xl mx-auto px-4">
             <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 lg:mb-8 xl:mb-10">Master Ruby
                 on Rails with Expert Mentorship</h1>
@@ -87,12 +144,10 @@
     </section>
 
     <!-- What’s In It For You Section -->
-    <section id="wiifm" class="py-12 md:py-16 lg:py-20 bg-gray-100 text-center">
+    <section id="wiifm" class="content-section bg-gray-100 text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 lg:mb-8 text-blue-600">What You Will Gain
-            </h2>
-            <ul
-                class="list-disc text-left text-base md:text-lg lg:text-xl text-gray-700 space-y-4 mx-auto max-w-xl pl-6 md:pl-8 lg:pl-12">
+            <h2 class="section-heading text-blue-600">What You Will Gain</h2>
+            <ul class="list-disc text-left mx-auto max-w-xl">
                 <li><strong>Personalized Learning Experience:</strong> Receive tailored one-on-one guidance to suit your
                     pace and goals.</li>
                 <li><strong>Hands-On Projects:</strong> Work on real-world projects for practical experience.</li>
@@ -105,15 +160,15 @@
     </section>
 
     <!-- YouTube Channel Section -->
-    <section id="youtube" class="py-16 md:py-20 bg-gray-100 text-center">
+    <section id="youtube" class="content-section bg-gray-100 text-center">
         <div
             class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-8">
             <div class="lg:w-1/2 text-left">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-600">Hi, I'm Malachi</h2>
-                <p class="text-gray-700 text-base md:text-lg mb-6">With extensive experience in Ruby on Rails
-                    development, I offer rapid and effective learning through personalized guidance.</p>
-                <p class="text-gray-700 text-base md:text-lg mb-6">Having faced numerous challenges in Rails myself, I
-                    created a YouTube channel to help others overcome similar obstacles.</p>
+                <h2 class="section-heading text-blue-600">Hi, I'm Malachi</h2>
+                <p class="mb-6">With extensive experience in Ruby on Rails development, I offer rapid and effective
+                    learning through personalized guidance.</p>
+                <p class="mb-6">Having faced numerous challenges in Rails myself, I created a YouTube channel to help
+                    others overcome similar obstacles.</p>
                 <a href="https://www.youtube.com/@MalachiRails" target="_blank"
                     title="Visit Malachi Rails YouTube Channel" class="cta-button inline-flex items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
@@ -125,12 +180,10 @@
     </section>
 
     <!-- Curriculum Section -->
-    <section id="curriculum" class="py-16 md:py-20 bg-gray-100 text-center">
+    <section id="curriculum" class="content-section bg-gray-100 text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-10 text-blue-600">Curriculum
-                Overview</h2>
-            <ul
-                class="list-disc text-left text-base md:text-lg lg:text-xl text-gray-700 space-y-4 mx-auto max-w-xl pl-6 md:pl-8 lg:pl-12">
+            <h2 class="section-heading text-blue-600">Curriculum Overview</h2>
+            <ul class="list-disc text-left mx-auto max-w-xl">
                 <li><strong>Fundamentals of Ruby Programming:</strong> Learn core Ruby concepts for effective
                     programming.</li>
                 <li><strong>Rails Framework:</strong> Master the Rails framework, including setup and deployment.</li>

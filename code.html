@@ -19,12 +19,24 @@
     <!-- Title -->
     <title>Malachi Rails - Ruby on Rails Resources and Tutorials</title>
 
-    <!-- Styles -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Styles -->
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #333333;
+        }
+
         .section-heading {
-            font-size: 2rem;
+            font-size: 2.25rem;
             font-weight: 700;
+            color: #1f2937;
         }
 
         .cta-button {
@@ -35,19 +47,36 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: 600;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .cta-button:hover {
             background-color: #3730a3;
+            transform: scale(1.05);
         }
 
-        .youtube-icon {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 8px;
+        .card {
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02);
+        }
+
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        .card img {
+            object-fit: cover;
+            height: 12rem;
+        }
+
+        .card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
         }
 
         .sticky-navbar {
@@ -55,22 +84,10 @@
             top: 0;
             z-index: 1000;
         }
-
-        .card {
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .card:active {
-            transform: scale(0.98);
-        }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body>
 
     <!-- Sticky Navbar -->
     <nav class="bg-white shadow-lg sticky-navbar">
@@ -96,115 +113,105 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-4">
-        <section>
-            <h1 class="section-heading text-center mb-8">Explore Ruby on Rails Resources by Malachi Rails</h1>
-            <p class="text-lg text-center mb-12">Discover a range of Ruby on Rails tutorials, templates, and clone code
+    <main class="container mx-auto p-6">
+        <section class="text-center mb-12">
+            <h1 class="section-heading mb-4">Explore Ruby on Rails Resources by Malachi Rails</h1>
+            <p class="text-lg mb-8">Discover a range of Ruby on Rails tutorials, templates, and clone code
                 to boost your Rails development skills. Click on the cards below to explore our offerings.</p>
         </section>
 
-        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Card 1 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
                 onclick="window.open('https://malachicode.gumroad.com/l/linktreeclone', '_blank')">
-                <img src="images/linktree.png" alt="Linktree Clone Code for Ruby on Rails"
-                    class="w-full h-48 object-cover" />
+                <img src="images/linktree.png" alt="Linktree Clone Code for Ruby on Rails" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Linktree Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
-                </div>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
-                onclick="window.open('https://malachicode.gumroad.com/l/instagram', '_blank')">
-                <img src="images/instagram.png" alt="Instagram Clone Code for Ruby on Rails"
-                    class="w-full h-48 object-cover" />
-                <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Instagram Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
-                </div>
-            </div>
-
-            <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
-                onclick="window.open('https://malachicode.gumroad.com/l/mborcq', '_blank')">
-                <img src="images/form.png" alt="Multi Step Form with Ruby on Rails 7 and Hotwire/Turbo"
-                    class="w-full h-48 object-cover" />
-                <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Multi Step Form with Ruby on Rails 7 and Hotwire/Turbo</h2>
+                    <h2>Linktree Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
-                onclick="window.open('https://malachicode.gumroad.com/l/template', '_blank')">
-                <img src="images/template.png" alt="My Post Template with TailwindCSS"
-                    class="w-full h-48 object-cover" />
+                onclick="window.open('https://malachicode.gumroad.com/l/instagram', '_blank')">
+                <img src="images/instagram.png" alt="Instagram Clone Code for Ruby on Rails" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">My Post Template with TailwindCSS</h2>
+                    <h2>Instagram Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
                 </div>
             </div>
 
             <!-- Card 3 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
+                onclick="window.open('https://malachicode.gumroad.com/l/youtube', '_blank')">
+                <img src="images/youtube.png" alt="YouTube Clone Code for Ruby on Rails" />
+                <div class="px-6 py-4">
+                    <h2>YouTube Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
+                </div>
+            </div>
 
 
             <!-- Card 4 -->
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
+                onclick="window.open('https://malachicode.gumroad.com/l/reddit', '_blank')">
+                <img src="images/reddit.png" alt="Reddit Clone Code for Ruby on Rails" />
+                <div class="px-6 py-4">
+                    <h2>Reddit Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
+                </div>
+            </div>
 
             <!-- Card 5 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
                 onclick="window.open('https://malachicode.gumroad.com/l/basic-turbo', '_blank')">
-                <img src="images/turbo.png" alt="Ruby on Rails Turbo - Basic App" class="w-full h-48 object-cover" />
+                <img src="images/turbo.png" alt="Ruby on Rails Turbo - Basic App" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Ruby on Rails Turbo - Basic App</h2>
+                    <h2>Ruby on Rails Turbo - Basic App</h2>
                 </div>
             </div>
 
             <!-- Card 6 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
                 onclick="window.open('https://malachicode.gumroad.com/l/render', '_blank')">
-                <img src="images/render.png" alt="Deploy Ruby on Rails app to Render"
-                    class="w-full h-48 object-cover" />
+                <img src="images/render.png" alt="Deploy Ruby on Rails app to Render" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Deploy Ruby on Rails app to Render</h2>
+                    <h2>Deploy Ruby on Rails app to Render</h2>
                 </div>
             </div>
 
             <!-- Card 7 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
                 onclick="window.open('https://malachicode.gumroad.com/l/rails-spa', '_blank')">
-                <img src="images/spa.png" alt="Github Source Code for Rails SPA + Notion File"
-                    class="w-full h-48 object-cover" />
+                <img src="images/spa.png" alt="Github Source Code for Rails SPA + Notion File" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Github Source Code for Rails SPA + Notion File</h2>
+                    <h2>Github Source Code for Rails SPA + Notion File</h2>
                 </div>
             </div>
 
             <!-- Card 8 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
-                onclick="window.open('https://malachicode.gumroad.com/l/youtube', '_blank')">
-                <img src="images/youtube.png" alt="YouTube Clone Code for Ruby on Rails"
-                    class="w-full h-48 object-cover" />
+                onclick="window.open('https://malachicode.gumroad.com/l/mborcq', '_blank')">
+                <img src="images/form.png" alt="Multi Step Form with Ruby on Rails 7 and Hotwire/Turbo" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">YouTube Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
+                    <h2>Multi Step Form with Ruby on Rails 7 and Hotwire/Turbo</h2>
                 </div>
             </div>
 
             <!-- Card 9 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
                 onclick="window.open('https://malachicode.gumroad.com/l/rolify', '_blank')">
-                <img src="images/roles.png" alt="Source Code For 'Add Roles to Users Using Gem Rolify'"
-                    class="w-full h-48 object-cover" />
+                <img src="images/roles.png" alt="Source Code For 'Add Roles to Users Using Gem Rolify'" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Source Code For "Add Roles to Users Using Gem Rolify"</h2>
+                    <h2>Source Code For "Add Roles to Users Using Gem Rolify"</h2>
                 </div>
             </div>
 
             <!-- Card 10 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer card"
-                onclick="window.open('https://malachicode.gumroad.com/l/reddit', '_blank')">
-                <img src="images/reddit.png" alt="Reddit Clone Code for Ruby on Rails"
-                    class="w-full h-48 object-cover" />
+                onclick="window.open('https://malachicode.gumroad.com/l/template', '_blank')">
+                <img src="images/template.png" alt="My Post Template with TailwindCSS" />
                 <div class="px-6 py-4">
-                    <h2 class="text-xl font-bold mb-2">Reddit Clone Code: Your Ticket to Ruby on Rails Mastery!</h2>
+                    <h2>My Post Template with TailwindCSS</h2>
                 </div>
             </div>
+
 
         </section>
     </main>

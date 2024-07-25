@@ -19,9 +19,20 @@
     <!-- Title -->
     <title>Contact Malachi Rails - Expert Ruby on Rails Mentorship</title>
 
-    <!-- Styles -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Styles -->
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            color: #333333;
+        }
+
         .navbar a {
             transition: color 0.3s ease;
         }
@@ -34,9 +45,11 @@
             background: linear-gradient(to right, #e50914, #141414);
             color: #ffffff;
             padding: 4rem 0;
+            text-align: center;
         }
 
-        .form-section {
+        .form-section,
+        .pay-per-call-section {
             background: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 2rem;
@@ -56,19 +69,59 @@
             outline: none;
         }
 
-        .btn-submit {
+        .btn-submit,
+        .btn-book {
             background-color: #e50914;
             color: #ffffff;
-            transition: background-color 0.3s ease;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .btn-submit:hover {
+        .btn-submit:hover,
+        .btn-book:hover {
             background-color: #d40813;
+            transform: scale(1.05);
+        }
+
+        .pay-per-call-section {
+            background-color: #fef2f2;
+            border: 1px solid #fca5a5;
+        }
+
+        .pay-per-call-section h2 {
+            color: #b91c1c;
+        }
+
+        .pay-per-call-section p,
+        .pay-per-call-section ul {
+            color: #b91c1c;
+        }
+
+        .pay-per-call-section .price {
+            color: #991b1b;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-heading {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .section-subheading {
+            font-size: 1.25rem;
+            color: #4b5563;
         }
     </style>
 </head>
 
-<body class="bg-gray-100 text-gray-900">
+<body>
 
     <!-- Navbar -->
     <nav class="bg-white shadow-lg sticky-navbar">
@@ -94,19 +147,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero-section text-center">
+    <div class="hero-section">
         <div class="max-w-7xl mx-auto px-4">
-            <h1 class="text-5xl font-extrabold mb-4">Get in Touch with Malachi Rails</h1>
-            <p class="text-lg">Fill out the form below to reach out for expert Rails mentorship and support.</p>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Get in Touch with Me</h1>
+            <p class="text-lg md:text-xl">Fill out the form below to reach out for expert Rails mentorship and support.
+            </p>
         </div>
     </div>
 
-    <!-- Contact Form Section -->
-    <div class="max-w-7xl mx-auto py-12 px-6">
-        <section class="form-section">
-            <h1 class="text-4xl font-extrabold mb-6">Contact Malachi Rails</h1>
-            <p class="text-lg text-gray-700 mb-8">Fill out the form below and I'll get back to you as soon as possible.
-                Your message is important to us.</p>
+    <!-- Contact and Pay Per Call Sections -->
+    <div class="max-w-7xl mx-auto py-12 px-6 flex flex-col md:flex-row gap-8">
+        <!-- Contact Form Section -->
+        <section class="form-section flex-1">
+            <h2 class="section-heading mb-6">Send a Message</h2>
 
             <form action="https://formspree.io/f/xnnajpaw" method="POST" class="space-y-6">
                 <div>
@@ -131,10 +184,25 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn-submit w-full py-3 px-6 rounded-lg transition"
-                        aria-label="Send Message">Send Message</button>
+                    <button type="submit" class="btn-submit w-full py-3 px-6 rounded-lg" aria-label="Send Message">Send
+                        Message</button>
                 </div>
             </form>
+        </section>
+
+        <!-- Pay Per Call Section -->
+        <section class="pay-per-call-section flex-1">
+            <h2 class="section-heading mb-6">Book a Call</h2>
+            <p class="text-lg mb-4">Get expert insights to address your challenges.</p>
+
+            <ul class="list-disc pl-5 mb-6 text-lg space-y-2">
+                <li>30-minute call</li>
+                <li>Availability is limited, so book now.</li>
+                <li>Price will increase to €25</li>
+            </ul>
+            <div class="price mb-6">€15</div>
+            <a href="https://calendly.com/povabusiness/30min" target="_blank"
+                title="Book a 30-minute session with Malachi Rails" class="btn-book">Book a Session</a>
         </section>
     </div>
 
