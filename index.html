@@ -28,12 +28,18 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f9fafb;
-            color: #333333;
+            color: #333;
             margin: 0;
             padding: 0;
         }
 
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
         .navbar a {
+            color: #333;
             transition: color 0.3s ease;
         }
 
@@ -41,15 +47,25 @@
             color: #e50914;
         }
 
-        .section-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #333;
+        .hero-section {
+            background: linear-gradient(to right, #e50914, #141414);
+            color: #ffffff;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-button {
-            background-color: #e50914;
-            color: #ffffff;
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section .cta-button {
+            background-color: #ffffff;
+            color: #e50914;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
             text-decoration: none;
@@ -58,37 +74,26 @@
             transition: background-color 0.3s, transform 0.3s;
         }
 
-        .cta-button:hover {
-            background-color: #d40813;
+        .hero-section .cta-button:hover {
+            background-color: #f1f1f1;
             transform: scale(1.05);
         }
 
-        .youtube-icon {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 8px;
+        .video-container {
+            max-width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* 16:9 aspect ratio */
+            position: relative;
+            margin-top: 2rem;
         }
 
-        .sticky-navbar {
-            position: -webkit-sticky;
-            position: sticky;
+        .video-container iframe {
+            position: absolute;
             top: 0;
-            z-index: 1000;
-        }
-
-        .hero-section {
-            background: linear-gradient(to right, #e50914, #141414);
-            color: #ffffff;
-            padding: 6rem 0;
-            text-align: center;
-        }
-
-        .hero-section h1 {
-            font-size: 4rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .content-section {
@@ -115,23 +120,79 @@
         .content-section ul li {
             margin-bottom: 1rem;
         }
+
+        .youtube-icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .sticky-navbar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        /* Additional Styles for Enhanced Conversion */
+        .testimonial-section {
+            background-color: #f3f4f6;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: #e50914;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            z-index: 1000;
+        }
+
+        .sticky-cta a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .sticky-cta:hover {
+            background-color: #d43f20;
+        }
     </style>
 </head>
 
 <body>
-
     <!-- Sticky Navbar -->
-    <!-- Navbar -->
-    <nav class="navbar top-0 w-full z-50 bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
+    <nav class="navbar sticky-navbar w-full bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
                 <!-- Logo -->
                 <div class="text-lg md:text-xl font-bold">
                     <a href="/" title="Malachi Rails - Expert Ruby on Rails Mentorship">Malachi Rails</a>
                 </div>
                 <!-- Menu Items -->
                 <div>
-                    <ul class="flex space-x-2 md:space-x-6">
+                    <ul class="flex space-x-4 md:space-x-8">
                         <li><a href="contact.html" title="Contact Malachi Rails"
                                 class="text-sm md:text-base">Contact</a></li>
                         <li><a href="mentorship.html" title="Ruby on Rails Mentorship Plans"
@@ -147,72 +208,87 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="max-w-4xl mx-auto px-4">
-            <h1
-                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 lg:mb-8 xl:mb-10 leading-tight sm:leading-tight md:leading-snug lg:leading-normal xl:leading-normal">
-                Master Ruby on Rails with Expert Mentorship
-            </h1>
+            <h1 class="leading-tight">Master Ruby on Rails Quickly.</h1>
+            <a href="mentorship.html" class="cta-button mt-6 inline-flex items-center">Get Started</a>
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wG899Usg6T4" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+    </section>
 
-    <!-- What’s In It For You Section -->
-    <section id="wiifm" class="content-section bg-gray-100 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="section-heading text-blue-600">What You Will Gain</h2>
-            <ul class="list-disc text-left mx-auto max-w-xl">
-                <li><strong>Personalized Learning Experience:</strong> Receive tailored one-on-one guidance to suit your
-                    pace and goals.</li>
-                <li><strong>Hands-On Projects:</strong> Work on real-world projects for practical experience.</li>
-                <li><strong>Career Advancement:</strong> Develop a strong portfolio with expert mentorship to enhance
-                    your career prospects.</li>
-                <li><strong>Community Support:</strong> Connect with a community of learners and professionals for
-                    shared insights and growth.</li>
-            </ul>
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+        <h2 class="section-heading text-blue-600">What my Students Say</h2>
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="testimonial">
+                <p>Malachi has great teaching material and carefully walks you through complex Rails code clearly and at
+                    the pace you need to better understand what's going on. I highly recommend Malachi if you need extra
+                    support to help you move up from beginner to intermediate/advanced level in your coding career. 👍
+                </p>
+                <p class="testimonial-author">Andy Tutton </p>
+            </div>
+            <div class="testimonial">
+                <p>"I went from a beginner to a confident Rails developer thanks to Malachi's expert guidance and
+                    support."</p>
+                <p class="testimonial-author">– Jamie L.</p>
+            </div>
         </div>
     </section>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="mentorship.html" title="Get Started with Mentorship">Start Your Mentorship Today</a>
+    </div>
 
     <!-- YouTube Channel Section -->
     <section id="youtube" class="content-section bg-gray-100 text-center">
         <div
             class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-8">
             <div class="lg:w-1/2 text-left">
-                <h2 class="section-heading text-blue-600">Hi, I'm Malachi</h2>
-                <p class="mb-6">With extensive experience in Ruby on Rails development, I offer rapid and effective
-                    learning through personalized guidance.</p>
-                <p class="mb-6">Having faced numerous challenges in Rails myself, I created a YouTube channel to help
-                    others overcome similar obstacles.</p>
+                <h2 class="section-heading text-blue-600">Meet Malachi</h2>
+                <p class="mb-6">Unlock your potential with personalized guidance from an industry expert. With years of
+                    hands-on experience in Ruby on Rails, I offer tailored mentorship to accelerate your learning and
+                    career.</p>
+                <p class="mb-6">My YouTube channel is packed with tips and tutorials designed to overcome common
+                    challenges in Rails development. Learn from my experiences and enhance your skills effectively.</p>
                 <a href="https://www.youtube.com/@MalachiRails" target="_blank"
                     title="Visit Malachi Rails YouTube Channel" class="cta-button inline-flex items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
-                        alt="YouTube Icon" class="youtube-icon"> Visit My Channel
+                        alt="YouTube Icon" class="youtube-icon"> Explore My Channel
                 </a>
             </div>
-            <img src="Bald and beasty cropeed.jpg" alt="Malachi Rails" class="w-full lg:w-2/5 object-cover">
+            <img src="Bald and beasty cropeed.jpg" alt="Malachi Rails"
+                class="w-full lg:w-2/5 object-cover rounded-lg shadow-lg">
         </div>
     </section>
 
     <!-- Curriculum Section -->
     <section id="curriculum" class="content-section bg-gray-100 text-center">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="section-heading text-blue-600">Curriculum Overview</h2>
+            <h2 class="section-heading text-blue-600">Comprehensive Curriculum</h2>
             <ul class="list-disc text-left mx-auto max-w-xl">
-                <li><strong>Fundamentals of Ruby Programming:</strong> Learn core Ruby concepts for effective
-                    programming.</li>
-                <li><strong>Rails Framework:</strong> Master the Rails framework, including setup and deployment.</li>
-                <li><strong>Building RESTful APIs:</strong> Develop and manage RESTful APIs for seamless data
-                    interactions.</li>
-                <li><strong>Database Integration:</strong> Gain proficiency in Active Record and database management.
-                </li>
-                <li><strong>Front-End Integration:</strong> Enhance your apps with HTML, CSS, and JavaScript for dynamic
-                    interfaces.</li>
-                <li><strong>Testing and Debugging:</strong> Implement robust testing and debugging practices for
-                    error-free applications.</li>
-                <li><strong>Deployment and Maintenance:</strong> Learn strategies for deploying and maintaining your
-                    applications efficiently.</li>
+                <li><strong>Foundations of Ruby Programming:</strong> Master Ruby fundamentals to build a solid
+                    programming base.</li>
+                <li><strong>Deep Dive into Rails Framework:</strong> Gain proficiency in Rails setup, configuration, and
+                    deployment.</li>
+                <li><strong>Creating RESTful APIs:</strong> Learn to develop and manage APIs for efficient data
+                    interaction.</li>
+                <li><strong>Database Mastery:</strong> Enhance your skills with Active Record and advanced database
+                    management techniques.</li>
+                <li><strong>Front-End Integration:</strong> Integrate HTML, CSS, and JavaScript to create interactive
+                    and responsive web applications.</li>
+                <li><strong>Testing and Debugging:</strong> Adopt best practices for thorough testing and debugging to
+                    ensure error-free applications.</li>
+                <li><strong>Deployment Strategies:</strong> Learn effective deployment and maintenance practices to keep
+                    your applications running smoothly.</li>
             </ul>
         </div>
     </section>
-
 </body>
 
 </html>
