@@ -51,13 +51,13 @@
             background: linear-gradient(to right, #e50914, #141414);
             color: #ffffff;
             padding: 6rem 0;
-            text-align: center;
+
             position: relative;
             overflow: hidden;
         }
 
         .hero-section h1 {
-            font-size: 4rem;
+
             font-weight: 800;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -69,7 +69,7 @@
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
             text-decoration: none;
-            font-size: 1rem;
+
             font-weight: 600;
             transition: background-color 0.3s, transform 0.3s;
         }
@@ -206,12 +206,22 @@
     </nav>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="leading-tight">Master Ruby on Rails Quickly.</h1>
-            <a href="mentorship.html" class="cta-button mt-6 inline-flex items-center">Get Started</a>
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="leading-tight text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem]">Learn Faster.</h1>
+            <h1 class="leading-tight text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[90rem]">Accomplish.</h1>
+            <h5 class="leading-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">Learn with the #1 Rails
+                mentor</h5>
+            <div class="mt-6 flex flex-col items-center space-y-4">
+
+                <a href="mentorship.html"
+                    class="cta-button inline-flex items-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Mentorship</a>
+            </div>
         </div>
     </section>
+
 
     <!-- Video Section -->
     <section class="video-container">
@@ -222,23 +232,71 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonial-section">
-        <h2 class="section-heading text-blue-600">What my Students Say</h2>
-        <div class="max-w-2xl mx-auto px-4">
-            <div class="testimonial">
-                <p>Malachi has great teaching material and carefully walks you through complex Rails code clearly and at
-                    the pace you need to better understand what's going on. I highly recommend Malachi if you need extra
-                    support to help you move up from beginner to intermediate/advanced level in your coding career. 👍
-                </p>
-                <p class="testimonial-author">Andy Tutton </p>
+    <!-- Testimonial Section -->
+    <section class="testimonial-section py-8 bg-gray-100">
+        <h2 class="section-heading text-blue-600 text-center text-4xl font-bold mb-12">What my Students Say</h2>
+        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
+                    <div>
+                        <p class="testimonial-author text-lg font-semibold text-gray-800">Andy Tutton</p>
+                        <div class="flex">
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-gray-300 text-xl">★</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed font-medium">Malachi has great teaching material and carefully
+                    walks you through complex Rails code clearly and at the pace you need to better understand what's
+                    going on. I highly recommend Malachi if you need extra support to help you move up from beginner to
+                    intermediate/advanced level in your coding career. 👍</p>
             </div>
-            <div class="testimonial">
-                <p>"I went from a beginner to a confident Rails developer thanks to Malachi's expert guidance and
-                    support."</p>
-                <p class="testimonial-author">– Jamie L.</p>
+            <div
+                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
+                    <div>
+                        <p class="testimonial-author text-lg font-semibold text-gray-800">Jamie L.</p>
+                        <div class="flex">
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed font-medium">"I went from a beginner to a confident Rails
+                    developer thanks to Malachi's expert guidance and support."</p>
+            </div>
+            <div
+                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <div class="flex items-center mb-4">
+                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
+                    <div>
+                        <p class="testimonial-author text-lg font-semibold text-gray-800">Jonathon Day</p>
+                        <div class="flex">
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-yellow-500 text-xl">★</span>
+                            <span class="text-gray-300 text-xl">★</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700 leading-relaxed font-medium">Malachi was an excellent mentor in starting my Ruby
+                    journey. From recommendations for resources and programming projects to advice on networking and
+                    growing your influence he was a key start on my Ruby on Rails journey.</p>
             </div>
         </div>
     </section>
+
+
 
     <!-- Sticky CTA -->
     <div class="sticky-cta">
@@ -267,28 +325,7 @@
         </div>
     </section>
 
-    <!-- Curriculum Section -->
-    <section id="curriculum" class="content-section bg-gray-100 text-center">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="section-heading text-blue-600">Comprehensive Curriculum</h2>
-            <ul class="list-disc text-left mx-auto max-w-xl">
-                <li><strong>Foundations of Ruby Programming:</strong> Master Ruby fundamentals to build a solid
-                    programming base.</li>
-                <li><strong>Deep Dive into Rails Framework:</strong> Gain proficiency in Rails setup, configuration, and
-                    deployment.</li>
-                <li><strong>Creating RESTful APIs:</strong> Learn to develop and manage APIs for efficient data
-                    interaction.</li>
-                <li><strong>Database Mastery:</strong> Enhance your skills with Active Record and advanced database
-                    management techniques.</li>
-                <li><strong>Front-End Integration:</strong> Integrate HTML, CSS, and JavaScript to create interactive
-                    and responsive web applications.</li>
-                <li><strong>Testing and Debugging:</strong> Adopt best practices for thorough testing and debugging to
-                    ensure error-free applications.</li>
-                <li><strong>Deployment Strategies:</strong> Learn effective deployment and maintenance practices to keep
-                    your applications running smoothly.</li>
-            </ul>
-        </div>
-    </section>
+
 </body>
 
 </html>
