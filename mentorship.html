@@ -110,30 +110,6 @@
             font-weight: 400;
             color: #6b7280;
         }
-
-        .final-cta {
-            background-color: #ffffff;
-            padding: 3rem 1.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .final-cta h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #333333;
-        }
-
-        .final-cta p {
-            font-size: 1.125rem;
-            color: #555555;
-            margin-bottom: 1.5rem;
-        }
-
-        .final-cta .btn-book {
-            margin: 0 0.5rem;
-        }
     </style>
 </head>
 <script async src="https://js.stripe.com/v3/buy-button.js"></script>
@@ -167,8 +143,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="max-w-7xl mx-auto px-6">
-            <h1 class="mb-4">Unlock Your FULL Potential</h1>
-            <p class="mb-6">Choose the right plan for your needs and start mastering Rails today!</p>
+            <h1 class="mb-4">Don't waste any more time.</h1>
+            <p class="mb-6">Let's learn Rails quickly and effectively!</p>
         </div>
     </section>
 
@@ -177,16 +153,17 @@
         <div class="flex flex-col md:flex-row gap-8 mb-12">
             <!-- Primary Tier -->
             <div class="comparison-card p-8 flex-1">
-                <h2 class="mb-4">Primary Tier</h2>
-                <p class="mb-4">For beginners needing a solid start.</p>
+                <h2 class="mb-4">Primary Tier </h2>
+
+                <p class="mb-4"> Start small. Grow quickly.</p>
+
                 <ul class="list-disc pl-5 mb-6 space-y-2">
                     <li>Ask me questions</li>
                     <li>Access to resources</li>
                     <li>Community support</li>
                     <li>Whatsapp support</li>
                 </ul>
-                <div class="price">€5 <span>/ month</span></div>
-
+                <div class="price">€10 <span>/ month</span></div>
                 <stripe-buy-button buy-button-id="buy_btn_1PkMAgKHyDT7Zw37I43P9ToS"
                     publishable-key="pk_live_51OoiRCKHyDT7Zw37QYhm5IfBGvYtCNAzbWCbJpIElTTA88QVcxifu1I0fOTsI3d34LPnE2egs9oxlon9wQU7wiZi00PGR1D3Wu">
                 </stripe-buy-button>
@@ -194,7 +171,7 @@
             <!-- Pro Tier -->
             <div class="comparison-card p-8 flex-1">
                 <h2 class="mb-4">Pro Tier</h2>
-                <p class="mb-4">Made to enhance your skills.</p>
+                <p class="mb-4">Extra pair of hands.</p>
                 <ul class="list-disc pl-5 mb-6 space-y-2">
                     <li>Weekly one-on-one sessions</li>
                     <li>Hands-on projects</li>
@@ -208,7 +185,7 @@
             <!-- Ultimate Tier -->
             <div class="comparison-card p-8 flex-1">
                 <h2 class="mb-4">Ultimate Tier</h2>
-                <p class="mb-4">For a complete experience.</p>
+                <p class="mb-4">Whatever you need, whenever.</p>
                 <ul class="list-disc pl-5 mb-6 space-y-2">
                     <li>Unlimited Calls</li>
                     <li>Whatsapp Support</li>
@@ -221,16 +198,7 @@
             </div>
         </div>
 
-        <!-- Final Call to Action -->
-        <section class="final-cta">
-            <h2 class="mb-6">Ready to Start?</h2>
-            <p class="mb-6">Choose a plan that suits your goals and start growing your skills today. Don’t wait!</p>
-            <div class="flex justify-center gap-4">
-                <a href="mentorship.html" class="btn-book">Get Started</a>
-                <a href="contact.html" class="btn-book">Contact Us</a>
-            </div>
-        </section>
-    </section>
+
 </body>
 
 </html>
