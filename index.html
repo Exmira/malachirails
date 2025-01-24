@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Malachi Rails offers expert mentorship and hands-on projects to help you master Ruby on Rails. Join us for personalized learning and career advancement opportunities.">
-    <meta name="keywords"
-        content="Ruby on Rails, Rails mentorship, Ruby programming, learn Rails, Rails developer, Ruby on Rails projects, Rails career advancement">
+        content="Malachi Rails - Learn Ruby on Rails with expert mentorship and hands-on projects.">
+    <meta name="keywords" content="Ruby on Rails, mentorship, coding, learn Rails, Rails tutorials, development">
     <meta name="author" content="Malachi Rails">
-    <title>Master Ruby on Rails with Expert Mentorship | Malachi Rails</title>
+    <title>Malachi Rails</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -18,12 +18,6 @@
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Privacy-First Analytics -->
-    <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="Analytics Tracking"
-            referrerpolicy="no-referrer-when-downgrade" /></noscript>
-
-    <!-- Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -33,59 +27,65 @@
             padding: 0;
         }
 
-        .navbar {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar a {
-            color: #333;
-            transition: color 0.3s ease;
-        }
-
-        .navbar a:hover {
-            color: #e50914;
-        }
-
         .hero-section {
-            background: linear-gradient(to right, #e50914, #141414);
-            color: #ffffff;
-            padding: 6rem 0;
-
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(to right, #0968e5, #141414);
+            color: #fff;
+            padding: 6rem 2rem;
+            text-align: center;
         }
 
         .hero-section h1 {
-
+            font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
         }
 
-        .hero-section .cta-button {
-            background-color: #ffffff;
-            color: #e50914;
+        .hero-section p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section a {
+            background-color: #fff;
+            color: #0970e5;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
-            text-decoration: none;
-
             font-weight: 600;
-            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .hero-section .cta-button:hover {
+        .hero-section a:hover {
             background-color: #f1f1f1;
             transform: scale(1.05);
         }
 
+        .about-section,
+        .courses-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about-section h2,
+        .courses-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+        }
+
+        .about-section p {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #4b5563;
+        }
+
         .video-container {
-            max-width: 100%;
-            overflow: hidden;
+            margin: 2rem 0;
             padding-top: 56.25%;
-            /* 16:9 aspect ratio */
             position: relative;
-            margin-top: 2rem;
+            overflow: hidden;
         }
 
         .video-container iframe {
@@ -96,263 +96,85 @@
             height: 100%;
         }
 
-        .content-section {
-            padding: 4rem 0;
-        }
-
-        .content-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 1.5rem;
-        }
-
-        .content-section p,
-        .content-section li {
-            font-size: 1.125rem;
-            color: #4b5563;
-        }
-
-        .content-section ul {
-            padding-left: 1.5rem;
-        }
-
-        .content-section ul li {
-            margin-bottom: 1rem;
-        }
-
-        .youtube-icon {
-            width: 24px;
-            height: 24px;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-
-        .sticky-navbar {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .section-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #333;
-        }
-
-        /* Additional Styles for Enhanced Conversion */
-        .testimonial-section {
-            background-color: #f3f4f6;
-            padding: 4rem 0;
+        .footer {
+            background-color: #141414;
+            color: #fff;
+            padding: 2rem 0;
             text-align: center;
         }
 
-        .testimonial {
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-        }
-
-        .sticky-cta {
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            background-color: #e50914;
-            color: #ffffff;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            z-index: 1000;
-        }
-
-        .sticky-cta a {
-            color: #ffffff;
+        .footer a {
+            color: #e50914;
             text-decoration: none;
         }
 
-        .sticky-cta:hover {
-            background-color: #d43f20;
+        .footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <!-- Sticky Navbar -->
-    <nav class="navbar sticky-navbar w-full bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="text-lg md:text-xl font-bold">
-                    <a href="/" title="Malachi Rails - Expert Ruby on Rails Mentorship">Malachi Rails</a>
-                </div>
-                <!-- Menu Items -->
-                <div>
-                    <ul class="flex space-x-4 md:space-x-8">
-                        <li><a href="contact.html" title="Contact Malachi Rails"
-                                class="text-sm md:text-base">Contact</a></li>
-                        <li><a href="https://www.patreon.com/c/user/membership?u=89485299" title="Ruby on Rails Mentorship Plans"
-                                class="text-sm md:text-base">Mentorship</a></li>
-                        <li><a href="code.html" title="Ruby on Rails Code Examples"
-                                class="text-sm md:text-base">Code</a></li>
-                    </ul>
-                </div>
+    <!-- Navbar -->
+    <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="text-xl font-bold">Malachi Rails</a>
+            <div>
+                <a href="contact.html" class="mx-4 text-gray-600 hover:text-gray-800">Contact</a>
+                <a href="code.html" class="mx-4 text-gray-600 hover:text-gray-800">Code</a>
+                <a href="https://www.patreon.com/c/user/membership?u=89485299"
+                    class="mx-4 text-red-600 hover:text-red-800" target="_blank">Mentorship</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="leading-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[9rem]">Learn Faster.</h1>
-            <h1 class="leading-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[9rem] nowrap-text">Achieve
-                More.</h1>
-            <div class="mt-6 flex flex-col items-center space-y-4">
-                <a href="https://www.patreon.com/c/user?u=89485299"
-                    class="cta-button inline-flex items-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">Mentorship</a>
-            </div>
-        </div>
-    </section>
-    <style>
-        .nowrap-text {
-            white-space: nowrap;
-        }
-    </style>
-    <!-- Testimonial Section -->
-    <section class="testimonial-section py-8 bg-gray-100">
-        <h2 class="section-heading text-blue-600 text-center text-4xl font-bold mb-12">What my Students Say</h2>
-        <div class="max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div
-                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
-                <div class="flex items-center mb-4">
-                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
-                    <div>
-                        <p class="testimonial-author text-lg font-semibold text-gray-800">Andy Tutton</p>
+    <section class="hero-section">
+        <h1>Hey, I'm Malachi Rails</h1>
 
-                    </div>
-                </div>
-                <p class="text-gray-700 leading-relaxed font-medium">Malachi has great teaching material and carefully
-                    walks you through complex Rails code clearly and at the pace you need to better understand what's
-                    going on. I highly recommend Malachi if you need extra support to help you move up from beginner to
-                    intermediate/advanced level in your coding career. 👍</p>
-            </div>
-            <div
-                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
-                <div class="flex items-center mb-4">
-                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
-                    <div>
-                        <p class="testimonial-author text-lg font-semibold text-gray-800">Jamie L.</p>
-
-                    </div>
-                </div>
-                <p class="text-gray-700 leading-relaxed font-medium">"I went from a beginner to a confident Rails
-                    developer thanks to Malachi's expert guidance and support."</p>
-            </div>
-            <div
-                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
-                <div class="flex items-center mb-4">
-                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
-                    <div>
-                        <p class="testimonial-author text-lg font-semibold text-gray-800">Jonathon Day</p>
-                    </div>
-                </div>
-                <p class="text-gray-700 leading-relaxed font-medium">Malachi was an excellent mentor in starting my Ruby
-                    journey. From recommendations for resources and programming projects to advice on networking and
-                    growing your influence he was a key start on my Ruby on Rails journey.</p>
-            </div>
-            <div
-                class="testimonial bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
-                <div class="flex items-center mb-4">
-                    <!----<img src="https://via.placeholder.com/50" alt="Author Icon" class="w-12 h-12 rounded-full mr-4"> -->
-                    <div>
-                        <p class="testimonial-author text-lg font-semibold text-gray-800">Anna</p>
-                    </div>
-                </div>
-                <p class="text-gray-700 leading-relaxed font-medium">I had incredible luck finding my mentor, Malachi!
-                    His guidance and support have been invaluable in my Rails journey. Rails felt like a puzzle, but
-                    Malachi helped me understand it. His passion for programming is contagious, making every session
-                    enjoyable and inspiring. He’s always responsive and quick to resolve any problems. If you’re looking
-                    for a mentor who offers positivity, accessibility, and results, Malachi is your go-to choice.</p>
-            </div>
-        </div>
-    </section>
-    <!-- Video Section -->
-    <!-- <section class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/wG899Usg6T4" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-    </section> -->
-
-
-
-
-
-
-
-    <!-- YouTube Channel Section
-    <section id="youtube" class="content-section bg-gray-100 text-center">
-        <div
-            class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center lg:items-start space-y-8 lg:space-y-0 lg:space-x-8">
-            <div class="lg:w-1/2 text-left">
-                <h2 class="section-heading text-blue-600">Meet Malachi</h2>
-                <p class="mb-6">Unlock your potential with personalized guidance from an industry expert. With years of
-                    hands-on experience in Ruby on Rails, I offer tailored mentorship to accelerate your learning and
-                    career.</p>
-                <p class="mb-6">My YouTube channel is packed with tips and tutorials designed to overcome common
-                    challenges in Rails development. Learn from my experiences and enhance your skills effectively.</p>
-                <a href="https://www.youtube.com/@MalachiRails" target="_blank"
-                    title="Visit Malachi Rails YouTube Channel" class="cta-button inline-flex items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
-                        alt="YouTube Icon" class="youtube-icon"> Explore My Channel
-                </a>
-            </div>
-            <img src="Bald and beasty cropeed.jpg" alt="Malachi Rails"
-                class="w-full lg:w-2/5 object-cover rounded-lg shadow-lg">
-        </div>
-    </section> -->
-
-    <!-- Final Call to Action -->
-    <section class="final-cta">
-        <h2 class="mb-6">Don't waste time doing it solo.</h2>
-
-        <div class="flex justify-center gap-4">
-            <a href="https://www.patreon.com/c/user?u=89485299" class="btn-book">Mentorship</a>
-        </div>
-    </section>
     </section>
 
-    <style>
-        .final-cta {
-            background-color: #ffffff;
-            padding: 3rem 1.5rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2 class="text-center">About Me</h2>
+        <p> <strong>Hi</strong>, I’m Malachi, a Ruby on Rails developer, educator, and storyteller passionate about
+            turning complex
+            concepts into actionable, hands-on learning experiences.
+            My journey into the Rails world started years ago
+            when I wanted to create a platform to solve a problem I deeply cared about. </p>
+        </br>
+        <p>With no formal coding
+            background, I dove into tutorials and forums, eventually falling in love with the power of Rails to bring
+            ideas to life. That experience taught me the value of learning by doing—and it’s the foundation of
+            everything I teach today. </p>
+        </br>
+        <p>Now, I run a YouTube channel where over<strong> 5000+ </strong>subscribers from around the globe tune in to
+            master Rails
+            development. My content focuses on real-world projects, like building e-commerce platforms, integrating
+            Hotwire, or deploying to production without breaking a sweat. My mission? To make coding approachable,
+            exciting, and empowering for developers of all levels.</p>
 
-        .final-cta h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #333333;
-        }
+    </section>
 
-        .final-cta p {
-            font-size: 1.125rem;
-            color: #555555;
-            margin-bottom: 1.5rem;
-        }
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <h2>Courses</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/sHBJiBimlGc?si=W8qyNm5ji0xOfLY3" title="Rails Course 1"
+                allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/DhxLOC-9kW0?si=Ys28SQ9K_5EYAX8S" title="Rails Course 2"
+                allowfullscreen></iframe>
+        </div>
+    </section>
 
-        .final-cta .btn-book {
-            margin: 0 0.5rem;
-        }
-    </style>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Malachi Rails. All rights reserved.</p>
+        <p><a href="contact.html">Contact</a> | <a href="https://www.patreon.com/c/user/membership?u=89485299"
+                target="_blank">Support on Patreon</a></p>
+    </footer>
 </body>
 
 </html>
