@@ -116,17 +116,30 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="bg-white shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-xl font-bold">Malachi Rails</a>
-            <div>
-                <a href="contact.html" class="mx-4 text-gray-600 hover:text-gray-800">Contact</a>
-                <a href="code.html" class="mx-4 text-gray-600 hover:text-gray-800">Code</a>
-                <a href="https://www.patreon.com/c/user/membership?u=89485299"
-                    class="mx-4 text-red-600 hover:text-red-800" target="_blank">Mentorship</a>
+    <nav class="navbar top-0 w-full z-50 bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-lg md:text-xl font-bold">
+                    <a href="/" title="Malachi Rails">Malachi Rails</a>
+                </div>
+                <!-- Menu Items -->
+                <div>
+                    <ul class="flex space-x-2 md:space-x-6">
+                        <li><a href="contact.html" title="Contact Malachi Rails"
+                                class="text-sm md:text-base">Contact</a></li>
+
+                        <li><a href="code.html" title="Ruby on Rails Code Examples"
+                                class="text-sm md:text-base">Code</a></li>
+                        <li><a href="https://www.patreon.com/c/user/membership?u=89485299"
+                                title="Ruby on Rails Mentorship Plans" class="text-sm md:text-base"
+                                target="_blank">Mentorship</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
+
 
     <!-- Hero Section -->
     <section class="hero-section">
