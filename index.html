@@ -2,192 +2,139 @@
 <html lang="en">
 
 <head>
-    <!-- SEO Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Malachi Rails - Learn Ruby on Rails with expert mentorship and hands-on projects.">
-    <meta name="keywords" content="Ruby on Rails, mentorship, coding, learn Rails, Rails tutorials, development">
-    <meta name="author" content="Malachi Rails">
-    <title>Malachi Rails</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Malachi Rails – Ruby on Rails expert, educator, and builder. Elevate your code, brand, and business." />
+  <title>Malachi Rails</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- AOS Scroll Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .hero-section {
-            background: linear-gradient(to right, #0968e5, #141414);
-            color: #fff;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e7eb;
+      margin: 0;
+    }
 
-        .hero-section h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
+    .btn-primary {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
-        .hero-section p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
+    .btn-primary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
 
-        .hero-section a {
-            background-color: #fff;
-            color: #0970e5;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .hero-section a:hover {
-            background-color: #f1f1f1;
-            transform: scale(1.05);
-        }
-
-        .about-section,
-        .courses-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .about-section h2,
-        .courses-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: #1f2937;
-        }
-
-        .about-section p {
-            font-size: 1.125rem;
-            line-height: 1.75;
-            color: #4b5563;
-        }
-
-        .video-container {
-            margin: 2rem 0;
-            padding-top: 56.25%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .footer {
-            background-color: #141414;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer a {
-            color: #e50914;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+  </style>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class="navbar top-0 w-full z-50 bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="text-lg md:text-xl font-bold">
-                    <a href="/" title="Malachi Rails">Malachi Rails</a>
-                </div>
-                <!-- Menu Items -->
-                <div>
-                    <ul class="flex space-x-2 md:space-x-6">
-                        <li><a href="contact.html" title="Contact Malachi Rails"
-                                class="text-sm md:text-base">Contact</a></li>
+<body class="bg-[#0f0f0f] text-white">
+  <!-- NAV -->
+  <nav class="w-full bg-[#0f172a] shadow fixed top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-xl font-extrabold tracking-tight">Malachi Rails</h1>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="#about" class="hover:text-blue-400">About</a></li>
+        <li><a href="#courses" class="hover:text-blue-400">Courses</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-                        <li><a href="code.html" title="Ruby on Rails Code Examples"
-                                class="text-sm md:text-base">Code</a></li>
-                        <li><a href="https://www.patreon.com/c/user/membership?u=89485299"
-                                title="Ruby on Rails Mentorship Plans" class="text-sm md:text-base"
-                                target="_blank">Mentorship</a></li>
-                    </ul>
-                </div>
-            </div>
+  <!-- HERO -->
+  <section class="h-screen pt-40 pb-16 px-6 text-center bg-gradient-to-br from-[#0ea5e9] to-[#1e3a8a] relative overflow-hidden">
+    <div class="absolute inset-0 bg-[url('/images/grain.png')] opacity-5"></div>
+    <h1 class="text-6xl font-extrabold leading-tight z-10 relative" data-aos="fade-up">I Build. I Teach. I Create.</h1>
+    <p class="text-2xl mt-6 max-w-2xl mx-auto z-10 relative" data-aos="fade-up" data-aos-delay="200">
+      Hi, I’m Malachi. A developer with vision. A creator who builds tools, brands, and platforms that don’t just work—they convert.
+    </p>
+    <div class="mt-10 z-10 relative" data-aos="zoom-in" data-aos-delay="400">
+      <a href="#courses" class="btn-primary">Start Learning</a>
+    </div>
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0L4.5 13.5m7.5 7.5V3" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="py-32 px-6 max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center" id="about">
+    <div class="w-full lg:w-1/2" data-aos="fade-right">
+      <img src="images/me.jpg" alt="Malachi" class="rounded-3xl shadow-xl hover:scale-105 transition transform duration-500" />
+    </div>
+    <div class="w-full lg:w-1/2 space-y-6" data-aos="fade-left">
+      <h2 class="text-4xl font-bold">Let’s Keep This Real.</h2>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        I didn’t come from a Silicon Valley background. I wasn’t handed a blueprint. I learned to build from scratch. Rails gave me superpowers—and now I use them to craft scalable apps, teach devs how to ship faster, and help creators turn ideas into products.
+      </p>
+      <p class="text-lg text-gray-300">
+        My content isn’t fluff. It’s not theory. It’s the stuff I wish I had when I started. If you’re serious about getting good—stick around.
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section id="courses" class="bg-[#111827] py-32 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-4xl font-extrabold mb-16" data-aos="fade-up">🔥 My Most Watched Courses</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="glass-card" data-aos="zoom-in-up">
+          <iframe class="w-full h-64 rounded-xl" src="https://www.youtube.com/embed/Ei4Aa6RJTyo" title="Rails Course 1" allowfullscreen></iframe>
         </div>
-    </nav>
-
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>Hey, I'm Malachi Rails</h1>
-
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2 class="text-center">About Me</h2>
-        <p> <strong>Hi</strong>, I’m Malachi, a Ruby on Rails developer, educator, and storyteller passionate about
-            turning complex
-            concepts into actionable, hands-on learning experiences.
-            My journey into the Rails world started years ago
-            when I wanted to create a platform to solve a problem I deeply cared about. </p>
-        </br>
-        <p>With no formal coding
-            background, I dove into tutorials and forums, eventually falling in love with the power of Rails to bring
-            ideas to life. That experience taught me the value of learning by doing—and it’s the foundation of
-            everything I teach today. </p>
-        </br>
-        <p>Now, I run a YouTube channel where over<strong> 5000+ </strong>subscribers from around the globe tune in to
-            master Rails
-            development. My content focuses on real-world projects, like building e-commerce platforms, integrating
-            Hotwire, or deploying to production without breaking a sweat. My mission? To make coding approachable,
-            exciting, and empowering for developers of all levels.</p>
-
-    </section>
-
-    <!-- Courses Section -->
-    <section id="courses" class="courses-section">
-        <h2>Courses</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/sHBJiBimlGc?si=W8qyNm5ji0xOfLY3" title="Rails Course 1"
-                allowfullscreen></iframe>
+        <div class="glass-card" data-aos="zoom-in-up" data-aos-delay="200">
+          <iframe class="w-full h-64 rounded-xl" src="https://www.youtube.com/embed/DhxLOC-9kW0" title="Rails Course 2" allowfullscreen></iframe>
         </div>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/DhxLOC-9kW0?si=Ys28SQ9K_5EYAX8S" title="Rails Course 2"
-                allowfullscreen></iframe>
-        </div>
-    </section>
+      </div>
+      <a href="https://www.youtube.com/@malachirails" target="_blank" class="mt-12 inline-block text-blue-400 hover:underline">Browse My YouTube</a>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 Malachi Rails. All rights reserved.</p>
-        <p><a href="contact.html">Contact</a> | <a href="https://www.patreon.com/c/user/membership?u=89485299"
-                target="_blank">Support on Patreon</a></p>
-    </footer>
+  <!-- CONTACT -->
+  <section id="contact" class="py-32 px-6 bg-gradient-to-tr from-[#1e3a8a] to-[#0ea5e9] text-center">
+    <h2 class="text-4xl font-extrabold mb-6" data-aos="fade-up">Let’s Connect</h2>
+    <p class="max-w-xl mx-auto text-lg text-white/80" data-aos="fade-up" data-aos-delay="200">
+      Whether you’re looking to learn, collaborate, or build—I'm ready to hear from you. Reach out, or follow the journey below.
+    </p>
+    <div class="mt-6 flex justify-center gap-6 flex-wrap" data-aos="fade-up" data-aos-delay="400">
+      <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fmal.asgharian%2F&is_from_rle" target="_blank" class="btn-primary">Instagram</a>
+      <a href="mailto:povabusiness@gmail.com" class="btn-primary">Email Me</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-10 text-sm bg-black text-white/60">
+    © 2025 Malachi Rails — Built with purpose.
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1200, once: true });</script>
 </body>
 
 </html>
