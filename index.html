@@ -49,7 +49,18 @@
       backdrop-filter: blur(10px);
       border-radius: 1.5rem;
       overflow: hidden;
-    }
+    }/* Hide the <br> by default */
+.mobile-br {
+  display: none;
+}
+
+/* Show <br> only on phones (small screens) */
+@media (max-width: 640px) {
+  .mobile-br {
+    display: inline;
+  }
+}
+
   </style>
 </head>
 
@@ -69,7 +80,12 @@
   <!-- HERO -->
   <section class="h-screen pt-40 pb-16 px-6 text-center bg-gradient-to-br from-[#0ea5e9] to-[#1e3a8a] relative overflow-hidden">
     <div class="absolute inset-0 bg-[url('/images/grain.png')] opacity-5"></div>
-    <h1 class="text-6xl font-extrabold leading-tight z-10 relative" data-aos="fade-up">I Build. I Teach. I Create.</h1>
+   <h1 class="text-6xl font-extrabold leading-tight z-10 relative" data-aos="fade-up">
+  I Build.<br class="mobile-br" />
+  I Teach.<br class="mobile-br" />
+  I Create.
+</h1>
+
     <p class="text-2xl mt-6 max-w-2xl mx-auto z-10 relative" data-aos="fade-up" data-aos-delay="200">
       Hi, I’m Malachi. A developer with vision. A creator who builds tools, brands, and platforms that don’t just work—they convert.
     </p>
@@ -135,6 +151,10 @@
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init({ duration: 1200, once: true });</script>
+  <!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+
 </body>
 
 </html>
